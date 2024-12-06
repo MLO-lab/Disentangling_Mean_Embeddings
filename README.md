@@ -1,5 +1,7 @@
 # Disentangling Cosine Similarity of Mean Embeddings
 
+(Code appears here soon)
+
 This is the code that accompanies the paper ["Disentangling Mean Embeddings for Better Diagnostics of Image Generators"](https://arxiv.org/abs/2409.01314), published at IAI Workshop @ NeurIPS 2024.
 
 We propose a novel approach to disentangle the cosine similarity of mean embeddings into the product of cosine similarities for individual pixel clusters via central kernel alignment.
