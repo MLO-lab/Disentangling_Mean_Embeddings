@@ -6,14 +6,11 @@ We propose a novel approach to disentangle the cosine similarity of mean embeddi
 This allows quantifying the contribution of the cluster-wise performance to the overall image generation performance.
 
 
-## To use it in your project
-
-
-```python
-import numpy as np
-```
-
 ## To reproduce our results
+
+First, download and unzip `img_align_celeba.zip into data/celeba/` from, e.g., `https://cseweb.ucsd.edu/~weijian/static/datasets/celeba/`.
+Second, run all cells in `preprocess_celeba.ipynb`.
+Then, run the cells in `experiments.ipynb`.
 
 
 ## Reference
