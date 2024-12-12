@@ -21,11 +21,13 @@ The figures are printed as cell outputs and are also stored in the folder `plots
 If you found this work or code useful, please cite:
 
 ```
-@article{gruber2024disentangling,
-  title={Disentangling Mean Embeddings for Better Diagnostics of Image Generators},
-  author={Gruber, Sebastian G and Ziegler, Pascal Tobias and Buettner, Florian},
-  journal={arXiv preprint arXiv:2409.01314},
-  year={2024}
+@inproceedings{
+gruber2024disentangling,
+title={Disentangling Mean Embeddings for Better Diagnostics of Image Generators},
+author={Sebastian Gregor Gruber and Pascal Tobias Ziegler and Florian Buettner},
+booktitle={Interpretable AI: Past, Present and Future},
+year={2024},
+url={https://openreview.net/forum?id=mZkShMbCaS}
 }
 ```
 
