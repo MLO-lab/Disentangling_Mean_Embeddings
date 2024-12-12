@@ -1,4 +1,4 @@
 .ipynb_checkpoints/
 plots/
 data/
-lib/
+lib/__pycache__/
