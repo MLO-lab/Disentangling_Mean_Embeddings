@@ -624,15 +624,10 @@ def get_model(model_name):
 
     Args:
         model_name (str): The name of the model to import. Supported values are:
-            - "DCGAN16x16"
             - "DCGAN28x28"
-            - "DCGAN32x32"
             - "DCGAN64x64"
-            - "Diffusion16x16"
             - "Diffusion28x28"
             - "Diffusion64x64"
-            - "condDiffusion28x28"
-            # - "smallDiffusion64x64" (commented out in the function)
 
     Returns:
         tuple: A tuple containing:
@@ -643,30 +638,19 @@ def get_model(model_name):
         ValueError: If the provided model_name is not supported.
 
     Example:
-        >>> model, image_size = get_model("DCGAN16x16")
+        >>> model, image_size = get_model("DCGAN28x28")
         >>> print(model)
-        <module 'models.DCGAN16x16.model' from '...'>
+        <module 'models.DCGAN28x28.model' from '...'>
         >>> print(image_size)
         16
     """
-    import models.DCGAN16x16.model as DCGAN16x16
     import models.DCGAN28x28.model as DCGAN28x28
-    import models.DCGAN32x32.model as DCGAN32x32
     import models.DCGAN64x64.model as DCGAN64x64
-    import models.Diffusion16x16.model as Diffusion16x16
     import models.Diffusion28x28.model as Diffusion28x28
     import models.Diffusion64x64.model as Diffusion64x64
-    import models.condDiffusion28x28.model as condDiffusion28x28
-    # import models.smallDiffusion64x64.model as smallDiffusion64x64
-    if model_name == "DCGAN16x16":
-        model = DCGAN16x16
-        image_size = 16
-    elif model_name == "DCGAN28x28":
+    if model_name == "DCGAN28x28":
         model = DCGAN28x28
         image_size = 28
-    elif model_name == "DCGAN32x32":
-        model = DCGAN32x32
-        image_size = 32
     elif model_name == "DCGAN64x64":
         model = DCGAN64x64
         image_size = 64
@@ -676,15 +660,9 @@ def get_model(model_name):
     elif model_name == "Diffusion28x28":
         model = Diffusion28x28
         image_size = 28
-    elif model_name == "Diffusion16x16":
-        model = Diffusion16x16
-        image_size = 16
-    elif model_name == "condDiffusion28x28":
-        model = condDiffusion28x28
-        image_size = 28
-    # elif model_name == "smallDiffusion64x64":
-    #     model = smallDiffusion64x64
-    #     image_size = 64
     else:
-        raise ValueError
+        available_models = [
+            "DCGAN28x28", "DCGAN64x64", "Diffusion28x28", "Diffusion64x64"
+        ]
+        raise ValueError(f"The model_name '{model_name}' does not exist. Available models are: {', '.join(available_models)}")
     return model, image_size

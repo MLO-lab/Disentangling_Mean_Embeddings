@@ -38,11 +38,13 @@ def create_training_path(model_name, dataset_name, max_images_per_epoch, params:
                    f"{dataset_name}-max_per_epoch{max_images_per_epoch}" \
                    f"-batch_size{param.batch_size}-ngf{param.ngf}-ndf{param.ndf}" \
                    f"-lr{param.lr}-beta1{param.beta1}/"
-        else:
+        elif model == "Diffusion":
             path = f"models/{model_name}/model_saves/" \
                    f"{dataset_name}-max_per_epoch{max_images_per_epoch}" \
                    f"-batch_size{param.batch_size}-size{param.size}" \
                    f"-lr{param.lr}-T{param.T}-deep_conv{param.deep_conv}/"
+        else:
+            raise ValueError(f"The model '{model}' does not exist. Use 'GAN' or 'Diffusion' instead.")
         create_path(path)
 
 
